@@ -3,6 +3,7 @@
 #include <vector>
 #include <sstream>
 #include <iomanip>
+#include <limits>
 
 using namespace std;
 
@@ -80,10 +81,15 @@ double eingabeDouble()
   double gehalt = 0.0;
   string Gehalt = eingabeString("Gehalt");
   stringstream streameingabe(Gehalt);
+  ostringstream os;
+  os.str("");
+  os.precision(4);
+  os << fixed << streameingabe.str();
+  streameingabe.str(os.str());
   streameingabe >> gehalt;
   return gehalt;
 
-  return gehalt;
+  
 }
 
 string eingabeDatum()
@@ -119,7 +125,8 @@ void ausgabeTabelle(const vector<Person> &person)
 {
   ostringstream os;
   os.str("");
-  os << left << setw(20) << "Name" << setw(30) << "Vorname" << setw(30) << "PersID" << setw(20) << "Gehalt" << setw(20) << "GeburtsTag"  << endl;
+  os << endl;
+  os << left << setw(20) << "Name" << setw(30) << "Vorname" << setw(30) << "PersID" << setw(20) << "Gehalt" << setw(20) << "GeburtsTag"  << endl << endl;
   cout << os.str();
   os.clear();
   for (const Person &p : person)
@@ -128,14 +135,15 @@ void ausgabeTabelle(const vector<Person> &person)
   }
 }
 
-int main()
+int main(int args,char *argv[])
 {
 
   Weiter w = J;
-  bool decision = 1;
+  bool decision = argv[1];
   vector<Person> person;
 
   decision = weiter();
+  cout << endl;
   if (decision == true)
   {
     w = J;
@@ -166,5 +174,5 @@ int main()
   
 
   finished:
-  cout << "Thanks" << endl;
+  cout << "List end" << endl;
 }

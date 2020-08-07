@@ -1,0 +1,49 @@
+J
+Giuseppe
+Di Lisa
+4550
+120'500
+01.04.1979
+J
+Jack
+Di Lisa
+7845
+750'000'000
+01.04.1979
+J
+Frank
+Di Lisa
+8500
+90000
+01.04.1979
+J
+Antonio
+Di Lisa
+1254
+85.000
+01.04.1979
+J
+Giuseppe
+Di Lisa
+4550
+120.000
+01.04.1979
+J
+Jack
+Di Lisa
+7845
+75.000
+01.04.1979
+J
+Frank
+Di Lisa
+8500
+90000
+01.04.1979
+J
+Antonio
+Di Lisa
+1254
+85.000
+01.04.1979
+N
